@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dt5nc6fu6re3a"
+path="res://.godot/imported/Midnight Scroll.ogg-b9aa51d32e17fbc3248d60a51255bd30.oggvorbisstr"
+
+[deps]
+
+source_file="res://Sounds/Midnight Scroll.ogg"
+dest_files=["res://.godot/imported/Midnight Scroll.ogg-b9aa51d32e17fbc3248d60a51255bd30.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

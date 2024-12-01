@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw1o7ufkesdym"]
+
+[ext_resource type="Script" path="res://Scripts/GameObjects/cpu_paddle.gd" id="1_bu0lq"]
+[ext_resource type="Texture2D" uid="uid://ck38tp3ehe7u1" path="res://Sprites/paddle_sprite.png" id="1_ufsua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4fhu"]
+size = Vector2(80, 600)
+
+[node name="cpuPaddle" type="StaticBody2D"]
+script = ExtResource("1_bu0lq")
+
+[node name="cpuSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-5.96046e-08, -4.76837e-07)
+scale = Vector2(10, 10)
+texture = ExtResource("1_ufsua")
+
+[node name="cpuCollision" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 0.4)
+shape = SubResource("RectangleShape2D_t4fhu")

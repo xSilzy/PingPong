@@ -1,0 +1,16 @@
+res://Scenes/UI/background.tscn
+res://Scenes/Game.tscn
+res://Scenes/Main.tscn
+res://Scenes/UI/Background.tscn
+res://Scenes/GameObejects/cpu_paddle.tscn
+res://Scenes/GameObejects/ball.tscn
+res://Scenes/GameObejects/player_paddle.tscn
+res://Scenes/UI/hud.tscn
+res://Scripts/Game.gd
+res://Scripts/GameObjects/player_paddle.gd
+res://Scripts/GameObjects/player_movement.gd
+res://Scenes/GameObejects/ball.gd
+res://Scripts/GameObjects/cpu_paddle.gd
+res://Scripts/global.gd
+res://Scripts/GameObjects/ball.gd
+res://Scripts/Global.gd

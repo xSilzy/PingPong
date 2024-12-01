@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://boosf4ux31m6d"]
+
+[ext_resource type="FontFile" uid="uid://cjqqgsl2ndjdl" path="res://Fonts/pcsenior.ttf" id="1_dxedd"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="playerScore" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 1494.0
+offset_top = 22.0
+offset_right = 1891.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 40
+text = "Score: 0"
+horizontal_alignment = 2

@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://u3gqvkx71p5h"]
+
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_fr8og"]
+[ext_resource type="Texture2D" uid="uid://cl2u0y2mwm8mc" path="res://Sprites/separator_sprite.png" id="1_ptfjl"]
+[ext_resource type="PackedScene" uid="uid://jrfygsujs03p" path="res://Scenes/GameObejects/player_paddle.tscn" id="2_x5xcl"]
+[ext_resource type="PackedScene" uid="uid://cw1o7ufkesdym" path="res://Scenes/GameObejects/cpu_paddle.tscn" id="3_jfebq"]
+[ext_resource type="PackedScene" uid="uid://bhrbskfck6eca" path="res://Scenes/GameObejects/ball.tscn" id="4_g518b"]
+[ext_resource type="PackedScene" uid="uid://boosf4ux31m6d" path="res://Scenes/UI/hud.tscn" id="5_mgvio"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ynpg"]
+size = Vector2(1920, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8kf0f"]
+size = Vector2(1920, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sm0va"]
+size = Vector2(96, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xaxy"]
+size = Vector2(859, 1080)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b15wk"]
+size = Vector2(129, 1080)
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_fr8og")
+
+[node name="separatorSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 530)
+scale = Vector2(10, 10)
+texture = ExtResource("1_ptfjl")
+
+[node name="playerPaddle" parent="." instance=ExtResource("2_x5xcl")]
+position = Vector2(100, 540)
+
+[node name="cpuPaddle" parent="." instance=ExtResource("3_jfebq")]
+position = Vector2(1820, 540)
+
+[node name="ball" parent="." instance=ExtResource("4_g518b")]
+position = Vector2(965, 560)
+collision_mask = 3
+
+[node name="Borders" type="StaticBody2D" parent="."]
+collision_layer = 2
+
+[node name="top" type="CollisionShape2D" parent="Borders"]
+position = Vector2(960, -32)
+shape = SubResource("RectangleShape2D_7ynpg")
+
+[node name="bottom" type="CollisionShape2D" parent="Borders"]
+position = Vector2(960, 1112)
+shape = SubResource("RectangleShape2D_8kf0f")
+
+[node name="right" type="CollisionShape2D" parent="Borders"]
+position = Vector2(1872, 540)
+shape = SubResource("RectangleShape2D_sm0va")
+
+[node name="playerScoreArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerScoreArea"]
+position = Vector2(1394.5, 540)
+shape = SubResource("RectangleShape2D_7xaxy")
+
+[node name="playerLoose" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerLoose"]
+position = Vector2(65.5, 540)
+shape = SubResource("RectangleShape2D_b15wk")
+
+[node name="HUD" parent="." instance=ExtResource("5_mgvio")]
+
+[node name="Countdown" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="playerScoreArea" to="." method="_on_player_score_area_body_entered"]
+[connection signal="body_entered" from="playerLoose" to="." method="_on_player_loose_body_entered"]
+[connection signal="timeout" from="Countdown" to="." method="_on_countdown_timeout"]

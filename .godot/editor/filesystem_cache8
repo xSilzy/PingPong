@@ -1,3 +1,46 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1733068832
+::res://::1733087826
 icon.svg::CompressedTexture2D::724428684443511894::1733068829::1733068833::1::::<><>::
+::res://Fonts/::1733076035
+DepartureMono-Regular.otf::FontFile::7077699692141357644::1733068303::1733071440::1::::<><>::
+pcsenior.ttf::FontFile::5438554154498551197::1716568829::1733076035::1::::<><>::
+::res://Scenes/::1733087572
+Game.tscn::PackedScene::1461973444060613487::1733087572::0::1::::<><>::res://Scripts/Game.gd<>uid://cl2u0y2mwm8mc::::res://Sprites/separator_sprite.png<>uid://jrfygsujs03p::::res://Scenes/GameObejects/player_paddle.tscn<>uid://cw1o7ufkesdym::::res://Scenes/GameObejects/cpu_paddle.tscn<>uid://bhrbskfck6eca::::res://Scenes/GameObejects/ball.tscn<>uid://boosf4ux31m6d::::res://Scenes/UI/hud.tscn
+Main.tscn::PackedScene::4790887899635324802::1733087572::0::1::::<><>::uid://btvaxsi6kqxf4::::res://Scenes/UI/Background.tscn<>uid://u3gqvkx71p5h::::res://Scenes/Game.tscn
+::res://Scenes/GameObejects/::1733087685
+ball.tscn::PackedScene::2912930405324379372::1733087685::0::1::::<><>::uid://c0o5q2owymhy6::::res://Sprites/ball_sprite.png<>res://Scripts/GameObjects/ball.gd
+cpu_paddle.tscn::PackedScene::6371577990983592216::1733087573::0::1::::<><>::res://Scripts/GameObjects/cpu_paddle.gd<>uid://ck38tp3ehe7u1::::res://Sprites/paddle_sprite.png
+player_paddle.tscn::PackedScene::667140802446910667::1733087573::0::1::::<><>::res://Scripts/GameObjects/player_movement.gd<>uid://ck38tp3ehe7u1::::res://Sprites/paddle_sprite.png
+::res://Scenes/UI/::1733087573
+Background.tscn::PackedScene::3763402678112039331::1733087572::0::1::::<><>::uid://drwr5rly3qk02::::res://Sprites/backgrounds/background full.png
+hud.tscn::PackedScene::3399069173178423617::1733087573::0::1::::<><>::uid://cjqqgsl2ndjdl::::res://Fonts/pcsenior.ttf
+::res://Scripts/::1733087747
+Game.gd::GDScript::-1::1733086477::0::1::::<>Node2D<>::
+global.gd::GDScript::-1::1733087572::0::1::::<>RefCounted<>::
+::res://Scripts/Game/::1733076426
+::res://Scripts/GameObjects/::1733087685
+ball.gd::GDScript::-1::1733087685::0::1::::<>CharacterBody2D<>::
+cpu_paddle.gd::GDScript::-1::1733084875::0::1::::<>StaticBody2D<>::
+player_movement.gd::GDScript::-1::1733087537::0::1::::<>StaticBody2D<>::
+::res://Sounds/::1733087856
+check-off.ogg::AudioStreamOggVorbis::5246235539892312480::1716666893::1733087856::1::::<><>::
+check-on.ogg::AudioStreamOggVorbis::9151180451225232438::1716666893::1733087856::1::::<><>::
+click-short-confirm.ogg::AudioStreamOggVorbis::7283595690925118470::1716666893::1733087856::1::::<><>::
+click-short.ogg::AudioStreamOggVorbis::6360661122909592051::1716666893::1733087856::1::::<><>::
+heartbeat.ogg::AudioStreamOggVorbis::7177682582286792463::1716666893::1733087856::1::::<><>::
+menu-back-click.ogg::AudioStreamOggVorbis::4651341651566772471::1716666893::1733087856::1::::<><>::
+menu-back-hover.ogg::AudioStreamOggVorbis::8492504104268446549::1716666893::1733087856::1::::<><>::
+menuback.ogg::AudioStreamOggVorbis::7700255482775489975::1716666893::1733087856::1::::<><>::
+menuclick.ogg::AudioStreamOggVorbis::2380353550012642562::1716666893::1733087856::1::::<><>::
+menuhit.ogg::AudioStreamOggVorbis::2001620756530524411::1716666893::1733087856::1::::<><>::
+Midnight Scroll.ogg::AudioStreamOggVorbis::8555575942216170752::1716725872::1733087856::1::::<><>::
+pause-retry-click.ogg::AudioStreamOggVorbis::2536215866206671651::1716666893::1733087856::1::::<><>::
+seeya.ogg::AudioStreamOggVorbis::6644723245496128430::1716666893::1733087856::1::::<><>::
+soft-hitfinish.ogg::AudioStreamOggVorbis::1587728426905770711::1716666893::1733087856::1::::<><>::
+welcome.ogg::AudioStreamOggVorbis::6150405602117706076::1716666893::1733087856::1::::<><>::
+::res://Sprites/::1733072594
+ball_sprite.png::CompressedTexture2D::6558315270169168523::1717181572::1733072206::1::::<><>::
+paddle_sprite.png::CompressedTexture2D::5534570803021752786::1717181336::1733072206::1::::<><>::
+separator_sprite.png::CompressedTexture2D::5601917134312381342::1733072593::1733072594::1::::<><>::
+::res://Sprites/backgrounds/::1733071038
+background full.png::CompressedTexture2D::8398975377227655445::1716601968::1733071038::1::::<><>::
