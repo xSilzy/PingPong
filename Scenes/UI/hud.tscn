@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://boosf4ux31m6d"]
 
-[ext_resource type="Script" path="res://Scenes/UI/hud.gd" id="1_bm4a6"]
 [ext_resource type="FontFile" uid="uid://cjqqgsl2ndjdl" path="res://Fonts/pcsenior.ttf" id="1_dxedd"]
+[ext_resource type="Script" path="res://Scripts/UI/hud.gd" id="1_nn37n"]
 
 [node name="HUD" type="CanvasLayer"]
-script = ExtResource("1_bm4a6")
+script = ExtResource("1_nn37n")
 
 [node name="playerScoreBackground" type="Label" parent="."]
 texture_filter = 1

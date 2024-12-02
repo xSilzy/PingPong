@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drwr5rly3qk02"
-path="res://.godot/imported/background full.png-ed778e1a7a00e9f0858c9eee077ae030.ctex"
+uid="uid://dt8b4uaim883h"
+path="res://.godot/imported/ball_sprite_dark_2.png-ca6ef1c036c44c305c87197985663e73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/backgrounds/background full.png"
-dest_files=["res://.godot/imported/background full.png-ed778e1a7a00e9f0858c9eee077ae030.ctex"]
+source_file="res://Sprites/ball_sprite_dark_2.png"
+dest_files=["res://.godot/imported/ball_sprite_dark_2.png-ca6ef1c036c44c305c87197985663e73.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://btvaxsi6kqxf4"]
 
-[ext_resource type="Texture2D" uid="uid://drwr5rly3qk02" path="res://Sprites/backgrounds/background full.png" id="1_ojqbw"]
+[ext_resource type="Texture2D" uid="uid://bwprlfxygg4qp" path="res://Sprites/backgrounds/background_dark.png" id="1_i0asq"]
 
 [node name="Background" type="Node2D"]
 
@@ -8,4 +8,4 @@
 texture_filter = 1
 position = Vector2(960, 540)
 scale = Vector2(10, 10)
-texture = ExtResource("1_ojqbw")
+texture = ExtResource("1_i0asq")

@@ -1,0 +1,8 @@
+res://Fonts/deafult.tres::929ee46aede7d441ad52143525c085f1::1733161110::res://.godot/exported/133200997/export-07f2cc97f55e87829e62b1b17ebc7b22-deafult.res
+res://Scenes/GameObejects/ball.tscn::d5d39d9e48ed03c8725cdb84ed302d8e::1733173802::res://.godot/exported/133200997/export-d9202e92d24219ee32b4ad1ffabbe9fc-ball.scn
+res://Scenes/GameObejects/cpu_paddle.tscn::da73ca294f7eec91c54d43174d9900ff::1733173802::res://.godot/exported/133200997/export-d1dd8858802f683ebcca965c55f3bf2a-cpu_paddle.scn
+res://Scenes/GameObejects/player_paddle.tscn::aaec6ad8b60de3a2d596aa306e9d69c6::1733173802::res://.godot/exported/133200997/export-70a8b208b2b54b9a3db1171c104cd9e7-player_paddle.scn
+res://Scenes/UI/Background.tscn::a9b02607b541676cbf8e326a75652c79::1733173801::res://.godot/exported/133200997/export-b5b162f4eee5eb02c8bdf5484fe1419a-Background.scn
+res://Scenes/UI/hud.tscn::6d5285c7bb1a4b4fc1a63cb600520f83::1733172150::res://.godot/exported/133200997/export-67605cadf80d25390853685a572b8dfc-hud.scn
+res://Scenes/Game.tscn::8737e2e390ea8636cc98efc220125fe2::1733174767::res://.godot/exported/133200997/export-8ec1ce4394550eef6b399142f35b815f-Game.scn
+res://Scenes/Main.tscn::4942cd8bfe430546bda11b1dc9e1c3ae::1733173801::res://.godot/exported/133200997/export-a8e1520d83f25710dd4e3da8c6f32601-Main.scn
