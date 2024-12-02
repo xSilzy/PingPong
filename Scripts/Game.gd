@@ -9,17 +9,23 @@ var time_left = 0
 func _ready():
 	# Hide the ball at the start of the game
 	ball.visible = false
+	$HUD/countdown.visible = true
+	$HUD/countdownBackground.visible = true
 	
 func _on_countdown_timeout():
 	# Handle countdown logic
 	if time_left < 3: 
 		$Countdown.start(1) # Restart the countdown timer
-		print( 3 - (time_left))  # Log the remaining countdown time
+		$HUD/countdown.text = str(3 - time_left) # Log the remaining countdown time		
 		time_left += 1
+		$HUD.sync_text()
+		
 	else:
 		# After the countdown, spawn a new ball and make it visible
 		ball.new_ball()
 		ball.visible = true
+		$HUD/countdown.visible = false
+		$HUD/countdownBackground.visible = false
 
 func _process(delta):
 	pass
@@ -35,7 +41,7 @@ func _on_player_loose_body_entered(body):
 
 func _on_player_score_area_body_entered(body):
 		if body == ball:
-			# Increment the score and update the HUD			
+			# Increment the score and update the HUD
 			score += 1
-			print("fix me")
 			$HUD/playerScore.text = str("Score: ", score)
+			$HUD.sync_text()

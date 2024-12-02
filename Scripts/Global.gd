@@ -6,6 +6,7 @@ const START_SPEED : int = 500
 const ACCEL : int = 50
 
 
+# different 'stages' of the game
 func ball_speed_stages(speed):
 	speed += ACCEL
 

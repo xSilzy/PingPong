@@ -1,17 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://boosf4ux31m6d"]
+[gd_scene load_steps=3 format=3 uid="uid://boosf4ux31m6d"]
 
+[ext_resource type="Script" path="res://Scenes/UI/hud.gd" id="1_bm4a6"]
 [ext_resource type="FontFile" uid="uid://cjqqgsl2ndjdl" path="res://Fonts/pcsenior.ttf" id="1_dxedd"]
 
 [node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_bm4a6")
+
+[node name="playerScoreBackground" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 1450.0
+offset_top = 26.0
+offset_right = 1900.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.368627, 0.317647, 0.403922, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 50
+text = "Score: 12"
 
 [node name="playerScore" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
-offset_left = 1494.0
-offset_top = 22.0
-offset_right = 1891.0
-offset_bottom = 73.0
+offset_left = 1444.0
+offset_top = 20.0
+offset_right = 1894.0
+offset_bottom = 71.0
+theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
-theme_override_font_sizes/font_size = 40
-text = "Score: 0"
-horizontal_alignment = 2
+theme_override_font_sizes/font_size = 50
+text = "Score: 12"
+
+[node name="countdownBackground" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.291
+anchor_top = 0.365
+anchor_right = 0.317
+anchor_bottom = 0.412
+offset_left = 331.28
+offset_top = 35.8
+offset_right = 524.961
+offset_bottom = 224.592
+pivot_offset = Vector2(100, 100)
+theme_override_colors/font_color = Color(0.367606, 0.318194, 0.403609, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+metadata/_edit_group_ = true
+
+[node name="countdown" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.291
+anchor_top = 0.365
+anchor_right = 0.317
+anchor_bottom = 0.412
+offset_left = 321.28
+offset_top = 25.8
+offset_right = 514.397
+offset_bottom = 213.516
+pivot_offset = Vector2(100, 100)
+theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 200
+horizontal_alignment = 1
+metadata/_edit_group_ = true

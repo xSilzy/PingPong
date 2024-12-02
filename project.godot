@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Ping Pong (recode)"
+config/name="Ping Pong (recoded)"
+config/tags=PackedStringArray("firstgames", "pingpong")
 run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"

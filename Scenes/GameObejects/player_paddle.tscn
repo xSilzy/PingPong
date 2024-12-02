@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ck38tp3ehe7u1" path="res://Sprites/paddle_sprite.png" id="1_v71fj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ld65"]
-size = Vector2(80, 600)
+size = Vector2(2, 625)
 
 [node name="playerPaddle" type="StaticBody2D"]
 script = ExtResource("1_b83dh")
@@ -16,6 +16,7 @@ scale = Vector2(10, 10)
 texture = ExtResource("1_v71fj")
 
 [node name="playerCollision" type="CollisionShape2D" parent="."]
+position = Vector2(39, 0)
 scale = Vector2(1, 0.4)
 shape = SubResource("RectangleShape2D_4ld65")
 one_way_collision_margin = 7.5

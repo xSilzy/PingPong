@@ -26,7 +26,10 @@ func _physics_process(delta):
 			# If the ball hits a paddle, increase speed and bounce
 			speed += Global.ACCEL
 			print("Speed: ", speed)
-			dir = dir.bounce(collision.get_normal())
+			
+			
+			dir = new_direction(collider)
+			print("collision normal", dir)
 		else:
 			# If the ball hits a wall, simply bounce
 			dir = dir.bounce(collision.get_normal())
@@ -48,5 +51,5 @@ func new_direction(collider):
 	# Reverse horizontal direction
 	new_dir.x = -1 if dir.x > 0 else 1
 	# Adjust vertical direction proportionally to the collision point
-	new_dir.y = (dist / (collider.p_height / 2)) * MAX_Y_VECTOR
+	new_dir.y = (dist / (collider.paddle_height / 2)) * MAX_Y_VECTOR
 	return new_dir.normalized()
