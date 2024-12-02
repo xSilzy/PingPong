@@ -11,3 +11,4 @@ res://Fonts/deafult.tres
 res://Scripts/GameObjects/ball.gd
 res://Scripts/GameObjects/cpu_paddle.gd
 res://Scenes/UI/hud.gd
+res://Scripts/Global.gd

@@ -27,16 +27,10 @@ func _on_countdown_timeout():
 		$HUD/countdown.visible = false
 		$HUD/countdownBackground.visible = false
 
-func _process(delta):
-	pass
- 
 
 func _on_player_loose_body_entered(body):
 	# Reset countdown when the player loses
 	$Countdown.start(1)
-
-	
-
 
 
 func _on_player_score_area_body_entered(body):
@@ -45,3 +39,8 @@ func _on_player_score_area_body_entered(body):
 			score += 1
 			$HUD/playerScore.text = str("Score: ", score)
 			$HUD.sync_text()
+
+
+func _on_accel_cooldown_timeout():
+	Global.isOnCooldown = false
+	

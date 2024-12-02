@@ -31,15 +31,15 @@ position = Vector2(960, 530)
 scale = Vector2(10, 10)
 texture = ExtResource("1_ptfjl")
 
+[node name="ball" parent="." instance=ExtResource("4_g518b")]
+position = Vector2(965, 560)
+collision_mask = 3
+
 [node name="playerPaddle" parent="." instance=ExtResource("2_x5xcl")]
 position = Vector2(100, 540)
 
 [node name="cpuPaddle" parent="." instance=ExtResource("3_jfebq")]
 position = Vector2(1820, 540)
-
-[node name="ball" parent="." instance=ExtResource("4_g518b")]
-position = Vector2(965, 560)
-collision_mask = 3
 
 [node name="Borders" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -74,6 +74,11 @@ shape = SubResource("RectangleShape2D_b15wk")
 one_shot = true
 autostart = true
 
+[node name="accel_cooldown" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
 [connection signal="body_entered" from="playerScoreArea" to="." method="_on_player_score_area_body_entered"]
 [connection signal="body_entered" from="playerLoose" to="." method="_on_player_loose_body_entered"]
 [connection signal="timeout" from="Countdown" to="." method="_on_countdown_timeout"]
+[connection signal="timeout" from="accel_cooldown" to="." method="_on_accel_cooldown_timeout"]

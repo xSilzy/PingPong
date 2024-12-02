@@ -24,12 +24,9 @@ func _physics_process(delta):
 		var collider = collision.get_collider()
 		if collider == $"../playerPaddle" or collider == $"../cpuPaddle":
 			# If the ball hits a paddle, increase speed and bounce
-			speed += Global.ACCEL
-			print("Speed: ", speed)
-			
-			
+			speed = Global.ball_speed_stages(speed)
+			$"../accel_cooldown".start(0.1)
 			dir = new_direction(collider)
-			print("collision normal", dir)
 		else:
 			# If the ball hits a wall, simply bounce
 			dir = dir.bounce(collision.get_normal())
