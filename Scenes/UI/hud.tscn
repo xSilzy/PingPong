@@ -9,26 +9,28 @@ script = ExtResource("1_nn37n")
 [node name="playerScoreBackground" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
-offset_left = 1450.0
-offset_top = 26.0
+offset_left = 1380.0
+offset_top = 22.0
 offset_right = 1900.0
-offset_bottom = 77.0
+offset_bottom = 78.0
 theme_override_colors/font_color = Color(0.368627, 0.317647, 0.403922, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
 text = "Score: 12"
+horizontal_alignment = 2
 
 [node name="playerScore" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
-offset_left = 1444.0
-offset_top = 20.0
+offset_left = 1374.0
+offset_top = 16.0
 offset_right = 1894.0
-offset_bottom = 71.0
+offset_bottom = 72.0
 theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
 text = "Score: 12"
+horizontal_alignment = 2
 
 [node name="countdownBackground" type="Label" parent="."]
 texture_filter = 1
