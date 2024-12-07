@@ -19,6 +19,7 @@ func _ready():
 
 
 
+
 func _process(delta):
 	# Update the ball's position and calculate the distance to it
 	ball_pos = ball.position

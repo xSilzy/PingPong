@@ -1,8 +1,11 @@
 res://Scenes/Main.tscn
-res://Scripts/UI/main_menu.gd
+res://Scripts/GameObjects/ball.gd
 res://Scenes/Game.tscn
 res://Scenes/UI/Options.tscn
 res://Scenes/UI/Main_menu.tscn
 res://Scenes/UI/Hud.tscn
-res://default_bus_layout.tres
-res://Scripts/Sounds.gd
+res://Scenes/GameObejects/ball.tscn
+res://Scenes/UI/Background.tscn
+res://Scenes/GameObejects/cpu_paddle.tscn
+res://Scripts/main.gd
+res://Scripts/UI/main_menu.gd

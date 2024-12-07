@@ -5,7 +5,9 @@ var sounds = {
 	"countdown" : preload("res://Sounds/countdown.ogg"),
 	"scoreup" : preload("res://Sounds/scoreup.ogg"),
 	"hit" : preload("res://Sounds/hit.ogg"),
-	"fail" : preload("res://Sounds/fail.ogg")
+	"fail" : preload("res://Sounds/fail.ogg"),
+	"buttonHover" : preload("res://Sounds/button-hover.ogg"),
+	"buttonClick" : preload("res://Sounds/button-click.ogg")
 }
 
 
@@ -13,13 +15,13 @@ var sounds = {
 
 func _ready():
 	var audio_index = AudioServer.get_bus_index("Master")
-	print(audio_index)
 	AudioServer.set_bus_volume_db(audio_index, volume) 
+	
+	add_child(sound_player)
 
 
 
 func play_sound(sound):
-	add_child(sound_player)
 	if sound in sounds:
 		match sound:
 			"countdown" :
@@ -32,6 +34,12 @@ func play_sound(sound):
 				sound_player.pitch_scale = randf_range(0, 100)
 			"fail" :
 				sound_player.stream = sounds["fail"]
+			"buttonHover" : 
+				sound_player.stream = sounds["buttonHover"]
+				sound_player.pitch_scale = randf_range(0, 100)
+			"buttonClick" : 
+				sound_player.stream = sounds["buttonClick"]
+				sound_player.pitch_scale = randf_range(0, 100)
 			
 		sound_player.play()
 		sound_player.pitch_scale = 1.0

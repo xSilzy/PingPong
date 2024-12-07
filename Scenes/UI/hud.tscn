@@ -67,3 +67,27 @@ theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 200
 horizontal_alignment = 1
 metadata/_edit_group_ = true
+
+[node name="speedBackground" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 21.0
+offset_top = 1024.0
+offset_right = 541.0
+offset_bottom = 1080.0
+theme_override_colors/font_color = Color(0.368627, 0.317647, 0.403922, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 50
+text = "Speed:"
+
+[node name="speed" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 15.0
+offset_top = 1018.0
+offset_right = 535.0
+offset_bottom = 1074.0
+theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 50
+text = "Speed:"

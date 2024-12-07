@@ -20,11 +20,10 @@ func _ready():
 	
 	add_child(background_instance)
 	add_child(main_menu_instance)
-	print_tree_pretty()
+
 
 
 
 func add_scene_as_child(scene):
 	var scene_instance = get(scene + "_instance")
 	get_parent().add_child(scene_instance)
-	print_tree_pretty()

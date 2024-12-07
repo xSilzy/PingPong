@@ -48,6 +48,12 @@ position = Vector2(965, 250)
 scale = Vector2(10, 10)
 texture = ExtResource("3_t0cij")
 
+[connection signal="mouse_entered" from="playButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="mouse_exited" from="playButton" to="." method="_on_play_button_mouse_exited"]
 [connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="mouse_entered" from="optionsButton" to="." method="_on_options_button_mouse_entered"]
+[connection signal="mouse_exited" from="optionsButton" to="." method="_on_options_button_mouse_exited"]
 [connection signal="pressed" from="optionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="mouse_entered" from="quitButton" to="." method="_on_quit_button_mouse_entered"]
+[connection signal="mouse_exited" from="quitButton" to="." method="_on_quit_button_mouse_exited"]
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]

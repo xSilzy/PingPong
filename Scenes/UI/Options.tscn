@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://d35a2lxt03wxc"]
+[gd_scene load_steps=2 format=3 uid="uid://d35a2lxt03wxc"]
+
+[ext_resource type="LabelSettings" uid="uid://b01uawbu6tbb3" path="res://Fonts/deafult.tres" id="1_cseec"]
 
 [node name="Options" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 922.0
+offset_bottom = 51.0
+text = "Work In Progress,.."
+label_settings = ExtResource("1_cseec")

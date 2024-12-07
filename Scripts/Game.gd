@@ -7,7 +7,9 @@ var time_left = 0
 @onready var ball = $ball  # Reference to the ball node
 
 
-
+func _process(delta):
+	$HUD/speed.text = str("Speed:", ball.speed/10)
+	$HUD.sync_text()
 
 func _ready():
 	# Hide the ball at the start of the game

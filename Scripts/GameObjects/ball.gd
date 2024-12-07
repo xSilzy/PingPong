@@ -12,9 +12,9 @@ var isOnCooldown : bool = false  # Cooldown state to control acceleration logic
 const SPEED_STAGES = [
 	{"speed": 450, "accel": 50},  # Stage 1
 	{"speed": 960, "accel": 40},  # Stage 2
-	{"speed": 1490, "accel": 10}, # Stage 3
-	{"speed": 3000, "accel": 20}, # Stage 4
-	{"speed": 3500, "accel": 5},  # Stage 5
+	{"speed": 1770, "accel": 30}, # Stage 3
+	{"speed": 3390, "accel": 10}, # Stage 4
+	{"speed": 3995, "accel": 5},  # Stage 5
 	{"speed": 10000, "accel": 1}  # Stage 6
 ]
 
@@ -24,6 +24,7 @@ const SPEED_STAGES = [
 func _ready():
 	# Store the size of the game window
 	win_size = get_viewport_rect().size
+
 
 
 
@@ -41,18 +42,19 @@ func _physics_process(delta):
 	var collision = move_and_collide(dir * speed * delta)
 	if collision:
 		var collider = collision.get_collider()
-		if collider == $"../playerPaddle" or $"../cpuPaddle":
-			# If the ball hits a paddle, increase speed and bounce
+		if collider == $"../playerPaddle": 
 			speed = ball_speed_stages(speed)
 			$"../accel_cooldown".start(0.05)
-			if collider == $"../playerPaddle": 
-				dir = new_direction(collider)
-			else:
-				dir = dir.bounce(collision.get_normal())
+			dir = new_direction(collider)
+			print(collider)
+		elif collider == $"../cpuPaddle": 
+			speed = ball_speed_stages(speed)
+			$"../accel_cooldown".start(0.05)
+			dir = dir.bounce(collision.get_normal())
 		else:
 			# If the ball hits a wall, simply bounce
 			dir = dir.bounce(collision.get_normal())
-			Sounds.play_sound("hit") # Play hit sound
+		Sounds.play_sound("hit") # Play hit sound
 
 
 
@@ -88,7 +90,6 @@ func ball_speed_stages(speed):
 				speed += SPEED_STAGES[i].accel 
 				isOnCooldown = true  # Set cooldown to prevent re-acceleration
 				break
-		Sounds.play_sound("hit")
 		print("Speed: ", speed)
 	return speed  # Return the updated speed
 
