@@ -1,5 +1,5 @@
 extends Node
-var volume : int = 100
+var volume : int = 0 #ranged from -60 dB to 0 dB
 var sound_player = AudioStreamPlayer.new()
 var sounds = {
 	"countdown" : preload("res://Sounds/countdown.ogg"),
@@ -12,8 +12,9 @@ var sounds = {
 
 
 func _ready():
-	var sfx_index = AudioServer.get_bus_index("Master")
-	AudioServer.set_bus_volume_db(sfx_index, -10) 
+	var audio_index = AudioServer.get_bus_index("Master")
+	print(audio_index)
+	AudioServer.set_bus_volume_db(audio_index, volume) 
 
 
 

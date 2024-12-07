@@ -4,3 +4,5 @@ res://Scenes/Game.tscn
 res://Scenes/UI/Options.tscn
 res://Scenes/UI/Main_menu.tscn
 res://Scenes/UI/Hud.tscn
+res://default_bus_layout.tres
+res://Scripts/Sounds.gd
