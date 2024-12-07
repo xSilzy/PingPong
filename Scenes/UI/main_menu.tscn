@@ -1,29 +1,45 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0hggd50rm0a0"]
+[gd_scene load_steps=4 format=3 uid="uid://d0hggd50rm0a0"]
 
-[ext_resource type="Texture2D" uid="uid://bkwlqo6ima8u3" path="res://Sprites/paddle_sprite_dark.png" id="1_b81bg"]
+[ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="1_715hr"]
+[ext_resource type="Texture2D" uid="uid://cr5p282lwet17" path="res://Sprites/button.png" id="2_vckxc"]
+[ext_resource type="Texture2D" uid="uid://dny6js0jemk5g" path="res://Sprites/banner.png" id="3_t0cij"]
 
 [node name="MainMenu" type="Node2D"]
+script = ExtResource("1_715hr")
 
-[node name="PaddleSpriteDark" type="Sprite2D" parent="."]
+[node name="playButton" type="TextureButton" parent="."]
 texture_filter = 1
-position = Vector2(520, 239)
+offset_left = 580.0
+offset_top = 535.0
+offset_right = 660.0
+offset_bottom = 551.0
 scale = Vector2(10, 10)
-texture = ExtResource("1_b81bg")
+texture_normal = ExtResource("2_vckxc")
 
-[node name="PaddleSpriteDark2" type="Sprite2D" parent="."]
+[node name="optionsButton" type="TextureButton" parent="."]
 texture_filter = 1
-position = Vector2(760, 239)
+offset_left = 580.0
+offset_top = 705.0
+offset_right = 660.0
+offset_bottom = 721.0
 scale = Vector2(10, 10)
-texture = ExtResource("1_b81bg")
+texture_normal = ExtResource("2_vckxc")
 
-[node name="PaddleSpriteDark3" type="Sprite2D" parent="."]
+[node name="quitButton" type="TextureButton" parent="."]
 texture_filter = 1
-position = Vector2(680, 239)
+offset_left = 580.0
+offset_top = 875.0
+offset_right = 660.0
+offset_bottom = 891.0
 scale = Vector2(10, 10)
-texture = ExtResource("1_b81bg")
+texture_normal = ExtResource("2_vckxc")
 
-[node name="PaddleSpriteDark4" type="Sprite2D" parent="."]
+[node name="Banner" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(600, 239)
+position = Vector2(965, 250)
 scale = Vector2(10, 10)
-texture = ExtResource("1_b81bg")
+texture = ExtResource("3_t0cij")
+
+[connection signal="pressed" from="playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="optionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]

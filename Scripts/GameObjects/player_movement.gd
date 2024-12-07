@@ -4,10 +4,15 @@ extends StaticBody2D
 var win_height : int
 var paddle_height : int
 
+
+
+
 func _ready():
 	# Initialize screen height and calculate scaled paddle height
 	win_height = get_viewport_rect().size.y
 	paddle_height = $playerSprite.texture.get_height() * 10
+
+
 
 func _process(delta):
 	# Handle player input for paddle movement

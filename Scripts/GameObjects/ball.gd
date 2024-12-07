@@ -18,9 +18,14 @@ const SPEED_STAGES = [
 	{"speed": 10000, "accel": 1}  # Stage 6
 ]
 
+
+
+
 func _ready():
 	# Store the size of the game window
 	win_size = get_viewport_rect().size
+
+
 
 func new_ball():
 	# Initialize ball at a random position and reset its speed and direction
@@ -28,6 +33,8 @@ func new_ball():
 	position.y = randi_range(400, win_size.y - 400)  # Random vertical position within bounds
 	speed = START_SPEED  # Set initial speed
 	dir = random_direction()  # Assign a random movement direction
+
+
 
 func _physics_process(delta): 
 	# Move the ball and check for collisions
@@ -37,8 +44,7 @@ func _physics_process(delta):
 		if collider == $"../playerPaddle" or $"../cpuPaddle":
 			# If the ball hits a paddle, increase speed and bounce
 			speed = ball_speed_stages(speed)
-			$"../accel_cooldown".start(0.1)
-			
+			$"../accel_cooldown".start(0.05)
 			if collider == $"../playerPaddle": 
 				dir = new_direction(collider)
 			else:
@@ -46,8 +52,9 @@ func _physics_process(delta):
 		else:
 			# If the ball hits a wall, simply bounce
 			dir = dir.bounce(collision.get_normal())
-			
-		Sounds.play_sound("hit") # Play hit sound
+			Sounds.play_sound("hit") # Play hit sound
+
+
 
 func random_direction():
 	# Generate a random normalized direction vector
@@ -55,6 +62,8 @@ func random_direction():
 	new_dir.x = [1, -1].pick_random()  # Random horizontal direction
 	new_dir.y = randf_range(-1, 1)  # Random vertical direction
 	return new_dir.normalized()
+
+
 
 func new_direction(collider):
 	# Calculate a new direction based on paddle collision
@@ -69,6 +78,8 @@ func new_direction(collider):
 	new_dir.y = (dist / (collider.paddle_height / 2)) * MAX_Y_VECTOR
 	return new_dir.normalized()
 
+
+
 # Adjust ball speed based on current stage and apply acceleration
 func ball_speed_stages(speed):
 	if isOnCooldown == false:  # Only proceed if not on cooldown
@@ -77,6 +88,7 @@ func ball_speed_stages(speed):
 				speed += SPEED_STAGES[i].accel 
 				isOnCooldown = true  # Set cooldown to prevent re-acceleration
 				break
-	print("Speed: ", speed)
+		Sounds.play_sound("hit")
+		print("Speed: ", speed)
 	return speed  # Return the updated speed
 

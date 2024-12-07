@@ -6,13 +6,17 @@ var time_left = 0
 
 @onready var ball = $ball  # Reference to the ball node
 
+
+
+
 func _ready():
 	# Hide the ball at the start of the game
-	print("Game is Ready")
 	ball.visible = false
 	$HUD/countdown.visible = true
 	$HUD/countdownBackground.visible = true
-	
+
+
+
 func _on_countdown_timeout():
 	# Handle countdown logic
 	if time_left < 3: 
@@ -31,11 +35,13 @@ func _on_countdown_timeout():
 		$HUD/countdownBackground.visible = false
 
 
+
 func _on_player_loose_body_entered(body):
 	if body == ball:
 		await Global.wait(0.5)
 		Sounds.play_sound("fail")
 		$Countdown.start(0)
+
 
 
 func _on_player_score_area_body_entered(body):
@@ -48,6 +54,6 @@ func _on_player_score_area_body_entered(body):
 		$HUD.sync_text()
 
 
+
 func _on_accel_cooldown_timeout():
 	$"."/ball.isOnCooldown = false
-	

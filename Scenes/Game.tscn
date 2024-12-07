@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=3 uid="uid://u3gqvkx71p5h"]
 
-[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_fr8og"]
 [ext_resource type="Texture2D" uid="uid://cl2u0y2mwm8mc" path="res://Sprites/separator_sprite.png" id="1_ptfjl"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_wb7gb"]
 [ext_resource type="PackedScene" uid="uid://jrfygsujs03p" path="res://Scenes/GameObejects/player_paddle.tscn" id="2_x5xcl"]
 [ext_resource type="PackedScene" uid="uid://cw1o7ufkesdym" path="res://Scenes/GameObejects/cpu_paddle.tscn" id="3_jfebq"]
 [ext_resource type="PackedScene" uid="uid://bhrbskfck6eca" path="res://Scenes/GameObejects/ball.tscn" id="4_g518b"]
-[ext_resource type="PackedScene" uid="uid://boosf4ux31m6d" path="res://Scenes/UI/hud.tscn" id="5_mgvio"]
+[ext_resource type="PackedScene" uid="uid://boosf4ux31m6d" path="res://Scenes/UI/Hud.tscn" id="6_t37oj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ynpg"]
 size = Vector2(1920, 64)
@@ -23,7 +23,7 @@ size = Vector2(815, 1080)
 size = Vector2(79, 1080)
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_fr8og")
+script = ExtResource("1_wb7gb")
 
 [node name="separatorSprite" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -68,17 +68,15 @@ shape = SubResource("RectangleShape2D_7xaxy")
 position = Vector2(40.5, 540)
 shape = SubResource("RectangleShape2D_b15wk")
 
-[node name="HUD" parent="." instance=ExtResource("5_mgvio")]
+[node name="HUD" parent="." instance=ExtResource("6_t37oj")]
 
 [node name="Countdown" type="Timer" parent="."]
 one_shot = true
 autostart = true
 
 [node name="accel_cooldown" type="Timer" parent="."]
-wait_time = 0.4
+wait_time = 0.1
 one_shot = true
-
-[node name="delay" type="Timer" parent="."]
 
 [connection signal="body_entered" from="playerScoreArea" to="." method="_on_player_score_area_body_entered"]
 [connection signal="body_entered" from="playerLoose" to="." method="_on_player_loose_body_entered"]

@@ -9,10 +9,15 @@ var move_by : int
 
 @onready var ball = $"../ball"  # Reference to the ball node
 
+
+
+
 func _ready():
 	# Initialize screen height and calculate scaled paddle height
 	win_height = get_viewport_rect().size.y
 	paddle_height = $cpuSprite.texture.get_height() * 10 
+
+
 
 func _process(delta):
 	# Update the ball's position and calculate the distance to it
