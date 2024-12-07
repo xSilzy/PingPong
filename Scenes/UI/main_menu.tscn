@@ -1,38 +1,46 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0hggd50rm0a0"]
+[gd_scene load_steps=6 format=3 uid="uid://d0hggd50rm0a0"]
 
 [ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="1_715hr"]
-[ext_resource type="Texture2D" uid="uid://cr5p282lwet17" path="res://Sprites/button.png" id="2_vckxc"]
+[ext_resource type="Texture2D" uid="uid://b2ruwoxhoby86" path="res://Sprites/playButton.png" id="2_ipke2"]
 [ext_resource type="Texture2D" uid="uid://dny6js0jemk5g" path="res://Sprites/banner.png" id="3_t0cij"]
+[ext_resource type="Texture2D" uid="uid://cky4r8xxmsrsy" path="res://Sprites/optionsButton.png" id="4_t472l"]
+[ext_resource type="Texture2D" uid="uid://dd3rbt7ia7u7c" path="res://Sprites/quitButton.png" id="4_yw7dt"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_715hr")
 
 [node name="playButton" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 580.0
-offset_top = 535.0
-offset_right = 660.0
-offset_bottom = 551.0
+offset_left = 940.0
+offset_top = 590.0
+offset_right = 1000.0
+offset_bottom = 606.0
 scale = Vector2(10, 10)
-texture_normal = ExtResource("2_vckxc")
+pivot_offset = Vector2(30.5, 9)
+texture_normal = ExtResource("2_ipke2")
+stretch_mode = 3
 
 [node name="optionsButton" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 580.0
-offset_top = 705.0
-offset_right = 660.0
-offset_bottom = 721.0
+offset_left = 940.0
+offset_top = 770.0
+offset_right = 1000.0
+offset_bottom = 786.0
 scale = Vector2(10, 10)
-texture_normal = ExtResource("2_vckxc")
+pivot_offset = Vector2(30.5, 9)
+texture_normal = ExtResource("4_t472l")
+stretch_mode = 3
 
 [node name="quitButton" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 580.0
-offset_top = 875.0
-offset_right = 660.0
-offset_bottom = 891.0
+offset_left = 940.0
+offset_top = 950.0
+offset_right = 1000.0
+offset_bottom = 966.0
 scale = Vector2(10, 10)
-texture_normal = ExtResource("2_vckxc")
+pivot_offset = Vector2(30.5, 9)
+texture_normal = ExtResource("4_yw7dt")
+stretch_mode = 3
 
 [node name="Banner" type="Sprite2D" parent="."]
 texture_filter = 1
