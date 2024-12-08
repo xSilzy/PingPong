@@ -8,4 +8,9 @@ res://Scenes/GameObejects/ball.tscn
 res://Scenes/UI/Background.tscn
 res://Scenes/GameObejects/cpu_paddle.tscn
 res://Scripts/main.gd
+res://Scripts/Sounds.gd
+res://Scripts/Global.gd
+res://Scripts/UI/hud.gd
 res://Scripts/UI/main_menu.gd
+res://Scripts/GameObjects/cpu_paddle.gd
+res://Scripts/game.gd

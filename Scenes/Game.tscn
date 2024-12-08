@@ -14,7 +14,7 @@ size = Vector2(1920, 64)
 size = Vector2(1920, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sm0va"]
-size = Vector2(140, 1080)
+size = Vector2(130, 1080)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7xaxy"]
 size = Vector2(815, 1080)
@@ -53,7 +53,7 @@ position = Vector2(960, 1112)
 shape = SubResource("RectangleShape2D_8kf0f")
 
 [node name="right" type="CollisionShape2D" parent="Borders"]
-position = Vector2(1850, 540)
+position = Vector2(1855, 540)
 shape = SubResource("RectangleShape2D_sm0va")
 
 [node name="playerScoreArea" type="Area2D" parent="."]

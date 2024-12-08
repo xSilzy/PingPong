@@ -1,7 +1,7 @@
 extends Node2D
 var GAME_SCENE = preload("res://Scenes/Game.tscn")
 var BACKGROUND_SCENE = preload("res://Scenes/UI/Background.tscn")
-var MAIN_MENU_SCENE = preload("res://Scenes/UI/main_menu.tscn")
+var MAIN_MENU_SCENE = preload("res://Scenes/UI/Main_menu.tscn")
 var OPTIONS_SCENE = preload("res://Scenes/UI/Options.tscn")
 var game_instance
 var background_instance
@@ -10,9 +10,9 @@ var options_instance
 
 
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Sounds.play_sound("welcome")
 	game_instance = GAME_SCENE.instantiate()
 	background_instance = BACKGROUND_SCENE.instantiate()
 	main_menu_instance = MAIN_MENU_SCENE.instantiate()

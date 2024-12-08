@@ -91,3 +91,29 @@ theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
 text = "Speed:"
+
+[node name="highscoreBackground" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 930.0
+offset_top = 1025.0
+offset_right = 1884.0
+offset_bottom = 1081.0
+theme_override_colors/font_color = Color(0.368627, 0.317647, 0.403922, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 50
+text = "Highscore:"
+horizontal_alignment = 2
+
+[node name="highscore" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 1058.0
+offset_top = 1019.0
+offset_right = 1878.0
+offset_bottom = 1075.0
+theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 50
+text = "Highscore:"
+horizontal_alignment = 2

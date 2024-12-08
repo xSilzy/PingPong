@@ -27,7 +27,6 @@ func _ready():
 
 
 
-
 func new_ball():
 	# Initialize ball at a random position and reset its speed and direction
 	position.x = win_size.x / 2
@@ -44,12 +43,9 @@ func _physics_process(delta):
 		var collider = collision.get_collider()
 		if collider == $"../playerPaddle": 
 			speed = ball_speed_stages(speed)
-			$"../accel_cooldown".start(0.05)
 			dir = new_direction(collider)
-			print(collider)
 		elif collider == $"../cpuPaddle": 
 			speed = ball_speed_stages(speed)
-			$"../accel_cooldown".start(0.05)
 			dir = dir.bounce(collision.get_normal())
 		else:
 			# If the ball hits a wall, simply bounce
@@ -83,13 +79,14 @@ func new_direction(collider):
 
 
 # Adjust ball speed based on current stage and apply acceleration
-func ball_speed_stages(speed):
+func ball_speed_stages(ball_speed):
 	if isOnCooldown == false:  # Only proceed if not on cooldown
 		for i in range(SPEED_STAGES.size()):
-			if speed <= SPEED_STAGES[i].speed: 
-				speed += SPEED_STAGES[i].accel 
+			if ball_speed <= SPEED_STAGES[i].speed: 
+				ball_speed += SPEED_STAGES[i].accel 
 				isOnCooldown = true  # Set cooldown to prevent re-acceleration
+				print("Speed: ", speed)
 				break
-		print("Speed: ", speed)
-	return speed  # Return the updated speed
+	$"../accel_cooldown".start(0.08)
+	return ball_speed  # Return the updated speed
 

@@ -2,6 +2,7 @@ extends Node
 var volume : int = 0 #ranged from -60 dB to 0 dB
 var sound_player = AudioStreamPlayer.new()
 var sounds = {
+	"welcome" : preload("res://Sounds/welcome.ogg"),
 	"countdown" : preload("res://Sounds/countdown.ogg"),
 	"scoreup" : preload("res://Sounds/scoreup.ogg"),
 	"hit" : preload("res://Sounds/hit.ogg"),
@@ -24,6 +25,8 @@ func _ready():
 func play_sound(sound):
 	if sound in sounds:
 		match sound:
+			"welcome" : 
+				sound_player.stream = sounds["welcome"]
 			"countdown" :
 				sound_player.stream = sounds["countdown"]
 			"scoreup" :
