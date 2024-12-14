@@ -1,6 +1,7 @@
 extends Node
 var volume : int = 0 #ranged from -60 dB to 0 dB
-var sound_player = AudioStreamPlayer.new()
+var sfx_player = AudioStreamPlayer.new()
+var music_player = AudioStreamPlayer.new()
 var sounds = {
 	"welcome" : preload("res://Sounds/welcome.ogg"),
 	"countdown" : preload("res://Sounds/countdown.ogg"),
@@ -15,10 +16,14 @@ var sounds = {
 
 
 func _ready():
-	var audio_index = AudioServer.get_bus_index("Master")
-	AudioServer.set_bus_volume_db(audio_index, volume) 
+	var sfx_index = AudioServer.get_bus_index("SFX")
+	var music_index = AudioServer.get_bus_index("MUSIC")
 	
-	add_child(sound_player)
+	AudioServer.set_bus_volume_db(sfx_index, volume)
+	AudioServer.set_bus_volume_db(music_index, volume)
+	
+	add_child(sfx_player)
+	add_child(music_player)
 
 
 
@@ -26,26 +31,28 @@ func play_sound(sound):
 	if sound in sounds:
 		match sound:
 			"welcome" : 
-				sound_player.stream = sounds["welcome"]
+				music_player.stream = sounds["welcome"]
+				music_player.play()
 			"countdown" :
-				sound_player.stream = sounds["countdown"]
+				sfx_player.stream = sounds["countdown"]
 			"scoreup" :
-				sound_player.stream = sounds["scoreup"]
-				sound_player.pitch_scale = randf_range(0, 100)
+				sfx_player.stream = sounds["scoreup"]
+				sfx_player.pitch_scale = randf_range(0, 100)
 			"hit" : 
-				sound_player.stream = sounds["hit"]
-				sound_player.pitch_scale = randf_range(0, 100)
+				sfx_player.stream = sounds["hit"]
+				sfx_player.pitch_scale = randf_range(0, 100)
 			"fail" :
-				sound_player.stream = sounds["fail"]
+				sfx_player.stream = sounds["fail"]
 			"buttonHover" : 
-				sound_player.stream = sounds["buttonHover"]
-				sound_player.pitch_scale = randf_range(0, 100)
+				sfx_player.stream = sounds["buttonHover"]
+				sfx_player.pitch_scale = randf_range(0, 100)
 			"buttonClick" : 
-				sound_player.stream = sounds["buttonClick"]
-				sound_player.pitch_scale = randf_range(0, 100)
-			
-		sound_player.play()
-		sound_player.pitch_scale = 1.0
+				sfx_player.stream = sounds["buttonClick"]
+				sfx_player.pitch_scale = randf_range(0, 100)
+		
+		
+		sfx_player.play()
+		sfx_player.pitch_scale = 1.0
 	else:
 		print("Sound not found or removed")
 		

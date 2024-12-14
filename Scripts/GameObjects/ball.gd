@@ -13,8 +13,8 @@ const SPEED_STAGES = [
 	{"speed": 450, "accel": 50},  # Stage 1
 	{"speed": 960, "accel": 40},  # Stage 2
 	{"speed": 1770, "accel": 30}, # Stage 3
-	{"speed": 3390, "accel": 10}, # Stage 4
-	{"speed": 3995, "accel": 5},  # Stage 5
+	{"speed": 3000, "accel": 10}, # Stage 4
+	{"speed": 3500, "accel": 5},  # Stage 5
 	{"speed": 10000, "accel": 1}  # Stage 6
 ]
 
@@ -50,7 +50,8 @@ func _physics_process(delta):
 		else:
 			# If the ball hits a wall, simply bounce
 			dir = dir.bounce(collision.get_normal())
-		Sounds.play_sound("hit") # Play hit sound
+			Sounds.play_sound("hit") # Play hit sound
+
 
 
 
@@ -87,6 +88,6 @@ func ball_speed_stages(ball_speed):
 				isOnCooldown = true  # Set cooldown to prevent re-acceleration
 				print("Speed: ", speed)
 				break
+		Sounds.play_sound("hit") # Play hit sound
 	$"../accel_cooldown".start(0.08)
 	return ball_speed  # Return the updated speed
-

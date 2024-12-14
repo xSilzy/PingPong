@@ -12,9 +12,9 @@ var config = ConfigFile.new()
 func _ready():
 	var error = config.load("user://scores.cfg")
 	if error != OK:
-		print("No config file found. Starting fresh.")
+		print("No save file found. Starting fresh...")
 	else:
-		print("Config file found.")
+		print("Save file found.")
 		highscore = config.get_value("player", "highscore", 0)
 
 

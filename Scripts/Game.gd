@@ -45,9 +45,12 @@ func _on_player_loose_body_entered(body):
 		score = -1
 		Global.save_data()
 		print("Highscore: ",Global.config.get_value("player","highscore"))
+		
 		await Global.wait(0.5)
+		
 		Sounds.play_sound("fail")
-		$Countdown.start(0)
+		get_parent().add_scene_as_child("fail_menu")
+		self.queue_free()
 
 
 

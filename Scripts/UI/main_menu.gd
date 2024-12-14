@@ -1,6 +1,4 @@
 extends Node2D
-var MAIN_SCENE = preload("res://Scenes/Main.tscn")
-var main_instance
 var frame_counter : int
 var frame_max : int = 5
 @onready var buttons = [
@@ -9,12 +7,8 @@ var frame_max : int = 5
 	$quitButton
 	]
 
- 
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	main_instance = MAIN_SCENE.instantiate()
 
 
 
@@ -29,16 +23,16 @@ func _process(_delta):
 
 
 func _on_play_button_pressed():
-	get_parent().add_scene_as_child("game")
-	self.queue_free()
 	Sounds.play_sound("buttonClick")
+	get_parent().add_scene_as_child("game")
+	get_parent().remove_child(self)
 
 
 
 func _on_options_button_pressed():
-	get_parent().add_scene_as_child("options")
-	self.queue_free()
 	Sounds.play_sound("buttonClick")
+	get_parent().add_scene_as_child("options")
+	get_parent().remove_child(self)
 
 
 
@@ -47,4 +41,3 @@ func _on_quit_button_pressed():
 	await Global.wait(0.1)
 	get_tree().quit()
 	
-
