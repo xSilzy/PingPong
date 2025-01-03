@@ -1,12 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://civv53vemn5qb"]
 
-[ext_resource type="Script" path="res://Scenes/UI/fail_menu.gd" id="1_e2sgb"]
+[ext_resource type="Script" path="res://Scripts/UI/fail_menu.gd" id="1_e2sgb"]
 [ext_resource type="Texture2D" uid="uid://bbya7402hqra4" path="res://Sprites/Score Frame.png" id="1_vy0ny"]
-[ext_resource type="Texture2D" uid="uid://dne2sfo5khndt" path="res://Sprites/main_menu_button_smaller.png" id="2_ge8qd"]
-[ext_resource type="Texture2D" uid="uid://ckxhynrtr11un" path="res://Sprites/retry_button_small.png" id="3_0jx4o"]
-[ext_resource type="Texture2D" uid="uid://dbs3f5ha8a7d4" path="res://Sprites/quit_button_small.png" id="4_w43i3"]
+[ext_resource type="Texture2D" uid="uid://dne2sfo5khndt" path="res://Sprites/main_menu_button.png" id="2_ge8qd"]
+[ext_resource type="Texture2D" uid="uid://ckxhynrtr11un" path="res://Sprites/retry_button.png" id="3_0jx4o"]
+[ext_resource type="Texture2D" uid="uid://dbs3f5ha8a7d4" path="res://Sprites/quit_button.png" id="4_w43i3"]
 
 [node name="Fail_Menu" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_e2sgb")
 
 [node name="ScoreFrame" type="Sprite2D" parent="."]

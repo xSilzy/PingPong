@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0hggd50rm0a0"]
 
 [ext_resource type="Script" path="res://Scripts/UI/main_menu.gd" id="1_715hr"]
-[ext_resource type="Texture2D" uid="uid://b2ruwoxhoby86" path="res://Sprites/playButton.png" id="2_ipke2"]
-[ext_resource type="Texture2D" uid="uid://dny6js0jemk5g" path="res://Sprites/banner.png" id="3_t0cij"]
-[ext_resource type="Texture2D" uid="uid://cky4r8xxmsrsy" path="res://Sprites/optionsButton.png" id="4_t472l"]
-[ext_resource type="Texture2D" uid="uid://dd3rbt7ia7u7c" path="res://Sprites/quitButton.png" id="4_yw7dt"]
+[ext_resource type="Texture2D" uid="uid://b2ruwoxhoby86" path="res://Sprites/mainMenu/playButton.png" id="2_ipke2"]
+[ext_resource type="Texture2D" uid="uid://dny6js0jemk5g" path="res://Sprites/mainMenu/banner.png" id="3_t0cij"]
+[ext_resource type="Texture2D" uid="uid://cky4r8xxmsrsy" path="res://Sprites/mainMenu/optionsButton.png" id="4_t472l"]
+[ext_resource type="Texture2D" uid="uid://dd3rbt7ia7u7c" path="res://Sprites/mainMenu/quitButton.png" id="4_yw7dt"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_715hr")

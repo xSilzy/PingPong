@@ -5,6 +5,7 @@ var score : int = 0
 var highscore : int = 0
 var shouldPlaySound : bool = true
 var config = ConfigFile.new()
+var paused: bool = false
 
 
 
@@ -13,6 +14,7 @@ func _ready():
 	var error = config.load("user://scores.cfg")
 	if error != OK:
 		print("No save file found. Starting fresh...")
+		config.set_value("player", "highscore", 0)
 	else:
 		print("Save file found.")
 		highscore = config.get_value("player", "highscore", 0)

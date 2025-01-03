@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bolu0j2q6qm5f"
-path="res://.godot/imported/ball_sprite_dark.png-e7a51021313ec5422c72472f52620aaa.ctex"
+uid="uid://dvvchaudnmb8e"
+path="res://.godot/imported/options_menu_button.png-c5482ae27bf68d1a1ad9a0e39ea51b09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ball_sprite_dark.png"
-dest_files=["res://.godot/imported/ball_sprite_dark.png-e7a51021313ec5422c72472f52620aaa.ctex"]
+source_file="res://Sprites/options_menu_button.png"
+dest_files=["res://.godot/imported/options_menu_button.png-c5482ae27bf68d1a1ad9a0e39ea51b09.ctex"]
 
 [params]
 

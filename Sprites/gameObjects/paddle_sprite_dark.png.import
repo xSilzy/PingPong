@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2ruwoxhoby86"
-path="res://.godot/imported/playButton.png-f54edb0c0a8e979b2038de855879a864.ctex"
+uid="uid://bkwlqo6ima8u3"
+path="res://.godot/imported/paddle_sprite_dark.png-66aad035247ea9089fad9bbf5ae230ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/playButton.png"
-dest_files=["res://.godot/imported/playButton.png-f54edb0c0a8e979b2038de855879a864.ctex"]
+source_file="res://Sprites/gameObjects/paddle_sprite_dark.png"
+dest_files=["res://.godot/imported/paddle_sprite_dark.png-66aad035247ea9089fad9bbf5ae230ee.ctex"]
 
 [params]
 

@@ -10,15 +10,16 @@ var time_left = 0
 func _process(_delta):
 	$HUD/speed.text = str("Speed:", ball.speed/10)
 	$HUD.sync_text()
+	
 
+		
 func _ready():
 	# Hide the ball at the start of the game
 	ball.visible = false
 	$HUD/countdown.visible = true
 	$HUD/countdownBackground.visible = true
 	print("Highscore: ",Global.config.get_value("player","highscore"))
-	
-
+	get_parent().game_scene = self
 
 
 func _on_countdown_timeout():
@@ -28,7 +29,6 @@ func _on_countdown_timeout():
 		$Countdown.start(1) # Restart the countdown timer
 		$HUD/countdown.text = str(3 - time_left) # Log the remaining countdown time		
 		time_left += 1
-		$HUD.sync_text()
 		
 	else:
 		# After the countdown, spawn a new ball and make it visible
@@ -65,9 +65,16 @@ func _on_player_score_area_body_entered(body):
 		Global.save_data()
 		$HUD/playerScore.text = str("Score: ", score)
 		$HUD/highscore.text = str("Highscore: ", Global.config.get_value("player","highscore"))
-		$HUD.sync_text()
 
 
 
 func _on_accel_cooldown_timeout():
 	$"."/ball.isOnCooldown = false
+	
+	
+func _input(_event: InputEvent):
+		if Input.is_action_pressed("ui_cancel"):
+			$HUD.hide()
+			get_parent().add_scene_as_child("pause_menu")
+			get_tree().paused = true
+		get_viewport().set_input_as_handled()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv0smxshgrnqu"
-path="res://.godot/imported/playButtonHover.png-4d96939b98ca73cc4f4322e3c12da9be.ctex"
+uid="uid://bcc56uy2jlsdb"
+path="res://.godot/imported/paddle_sprite_dark_2.png-9225fc767a7f25970d7c89def4647853.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/playButtonHover.png"
-dest_files=["res://.godot/imported/playButtonHover.png-4d96939b98ca73cc4f4322e3c12da9be.ctex"]
+source_file="res://Sprites/gameObjects/paddle_sprite_dark_2.png"
+dest_files=["res://.godot/imported/paddle_sprite_dark_2.png-9225fc767a7f25970d7c89def4647853.ctex"]
 
 [params]
 

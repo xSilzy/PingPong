@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckxhynrtr11un"
-path="res://.godot/imported/retry_button_small.png-4d47486c735368c2158f7aa0d4a0f624.ctex"
+uid="uid://ck38tp3ehe7u1"
+path="res://.godot/imported/paddle_sprite.png-cdde1d046a45e04314f472412b7dec77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/retry_button_small.png"
-dest_files=["res://.godot/imported/retry_button_small.png-4d47486c735368c2158f7aa0d4a0f624.ctex"]
+source_file="res://Sprites/gameObjects/paddle_sprite.png"
+dest_files=["res://.godot/imported/paddle_sprite.png-cdde1d046a45e04314f472412b7dec77.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck38tp3ehe7u1"
-path="res://.godot/imported/paddle_sprite.png-047e1bb8783cebae613ea800bc872fff.ctex"
+uid="uid://b2ruwoxhoby86"
+path="res://.godot/imported/playButton.png-11fd49b6e8d1ca3fd80071cfb7878244.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/paddle_sprite.png"
-dest_files=["res://.godot/imported/paddle_sprite.png-047e1bb8783cebae613ea800bc872fff.ctex"]
+source_file="res://Sprites/mainMenu/playButton.png"
+dest_files=["res://.godot/imported/playButton.png-11fd49b6e8d1ca3fd80071cfb7878244.ctex"]
 
 [params]
 

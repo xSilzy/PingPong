@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://jrfygsujs03p"]
 
 [ext_resource type="Script" path="res://Scripts/GameObjects/player_movement.gd" id="1_b83dh"]
-[ext_resource type="Texture2D" uid="uid://ck38tp3ehe7u1" path="res://Sprites/paddle_sprite.png" id="1_v71fj"]
+[ext_resource type="Texture2D" uid="uid://ck38tp3ehe7u1" path="res://Sprites/gameObjects/paddle_sprite.png" id="1_v71fj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ld65"]
 size = Vector2(1, 625)

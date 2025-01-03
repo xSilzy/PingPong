@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://d35a2lxt03wxc"]
+[gd_scene load_steps=3 format=3 uid="uid://d35a2lxt03wxc"]
 
 [ext_resource type="LabelSettings" uid="uid://b01uawbu6tbb3" path="res://Fonts/deafult.tres" id="1_cseec"]
+[ext_resource type="Script" path="res://Scripts/UI/options.gd" id="1_nqsgb"]
 
 [node name="Options" type="Node2D"]
+script = ExtResource("1_nqsgb")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 922.0

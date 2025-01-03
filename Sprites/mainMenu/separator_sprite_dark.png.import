@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcc56uy2jlsdb"
-path="res://.godot/imported/paddle_sprite_dark_2.png-677c3da52302775ed124baf263d54802.ctex"
+uid="uid://bk83i6igo3rn2"
+path="res://.godot/imported/separator_sprite_dark.png-4f12e10fd5097e626021540462d93ace.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/paddle_sprite_dark_2.png"
-dest_files=["res://.godot/imported/paddle_sprite_dark_2.png-677c3da52302775ed124baf263d54802.ctex"]
+source_file="res://Sprites/mainMenu/separator_sprite_dark.png"
+dest_files=["res://.godot/imported/separator_sprite_dark.png-4f12e10fd5097e626021540462d93ace.ctex"]
 
 [params]
 

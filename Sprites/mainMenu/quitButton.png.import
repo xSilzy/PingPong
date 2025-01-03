@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6odwlljl0rva"
-path="res://.godot/imported/sound_icon_selected.png-eb5719b3c75d1b23b2a6ae8cd835720b.ctex"
+uid="uid://dd3rbt7ia7u7c"
+path="res://.godot/imported/quitButton.png-15d05be66e10dccd27d024c2bbc8f0ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/sound_icon_selected.png"
-dest_files=["res://.godot/imported/sound_icon_selected.png-eb5719b3c75d1b23b2a6ae8cd835720b.ctex"]
+source_file="res://Sprites/mainMenu/quitButton.png"
+dest_files=["res://.godot/imported/quitButton.png-15d05be66e10dccd27d024c2bbc8f0ad.ctex"]
 
 [params]
 

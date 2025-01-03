@@ -1,7 +1,7 @@
 extends Node2D
 
 var frame_counter : int
-var frame_max : int = 5
+var FRAME_MAX : int = 5
 @onready var buttons = [
 	$homeButton, 
 	$retryButton, 
@@ -14,7 +14,7 @@ var frame_max : int = 5
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	frame_counter += 1
-	if frame_counter >= frame_max:
+	if frame_counter >= FRAME_MAX:
 		for button in buttons:
 			Global.button_grow(button)
 		frame_counter = 0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lwkr20omi0y"
-path="res://.godot/imported/difficulty_icon.png-1cd4810e8e1bcf35740b7c1f48367a32.ctex"
+uid="uid://c5qrr4ue2o43l"
+path="res://.godot/imported/display_icon.png-5b0d1441f2f5662dca54c3bd966730ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/difficulty_icon.png"
-dest_files=["res://.godot/imported/difficulty_icon.png-1cd4810e8e1bcf35740b7c1f48367a32.ctex"]
+source_file="res://Sprites/optionsMenu/display_icon.png"
+dest_files=["res://.godot/imported/display_icon.png-5b0d1441f2f5662dca54c3bd966730ec.ctex"]
 
 [params]
 

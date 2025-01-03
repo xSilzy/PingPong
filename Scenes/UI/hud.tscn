@@ -10,27 +10,51 @@ script = ExtResource("1_nn37n")
 texture_filter = 1
 texture_repeat = 1
 offset_left = 1380.0
-offset_top = 22.0
+offset_top = 18.5
 offset_right = 1900.0
-offset_bottom = 78.0
+offset_bottom = 74.5
 theme_override_colors/font_color = Color(0.368627, 0.317647, 0.403922, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
-text = "Score: 12"
+text = "Score: 0"
 horizontal_alignment = 2
 
 [node name="playerScore" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
-offset_left = 1374.0
+offset_left = 1375.0
 offset_top = 16.0
-offset_right = 1894.0
+offset_right = 1895.0
 offset_bottom = 72.0
 theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
-text = "Score: 12"
+text = "Score: 0"
 horizontal_alignment = 2
+
+[node name="pauseBackground" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 30.0
+offset_top = 18.5
+offset_right = 580.0
+offset_bottom = 74.5
+theme_override_colors/font_color = Color(0.368627, 0.317647, 0.403922, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 50
+text = "Pause (esc)"
+
+[node name="pause" type="Label" parent="."]
+texture_filter = 1
+texture_repeat = 1
+offset_left = 25.0
+offset_top = 16.0
+offset_right = 575.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
+theme_override_fonts/font = ExtResource("1_dxedd")
+theme_override_font_sizes/font_size = 50
+text = "Pause (esc)"
 
 [node name="countdownBackground" type="Label" parent="."]
 texture_filter = 1
@@ -41,8 +65,8 @@ anchor_right = 0.317
 anchor_bottom = 0.412
 offset_left = 331.28
 offset_top = 35.8
-offset_right = 524.961
-offset_bottom = 224.592
+offset_right = 526.36
+offset_bottom = 225.04
 pivot_offset = Vector2(100, 100)
 theme_override_colors/font_color = Color(0.367606, 0.318194, 0.403609, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
@@ -59,8 +83,8 @@ anchor_right = 0.317
 anchor_bottom = 0.412
 offset_left = 311.28
 offset_top = 25.8
-offset_right = 504.397
-offset_bottom = 213.516
+offset_right = 506.36
+offset_bottom = 215.04
 pivot_offset = Vector2(100, 100)
 theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
@@ -71,49 +95,49 @@ metadata/_edit_group_ = true
 [node name="speedBackground" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
-offset_left = 21.0
-offset_top = 1024.0
-offset_right = 541.0
-offset_bottom = 1080.0
+offset_left = 20.0
+offset_top = 1022.5
+offset_right = 540.0
+offset_bottom = 1078.5
 theme_override_colors/font_color = Color(0.368627, 0.317647, 0.403922, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
-text = "Speed:"
+text = "Speed: 0"
 
 [node name="speed" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
 offset_left = 15.0
-offset_top = 1018.0
+offset_top = 1020.0
 offset_right = 535.0
-offset_bottom = 1074.0
+offset_bottom = 1076.0
 theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
-text = "Speed:"
+text = "Speed: 0"
 
 [node name="highscoreBackground" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
-offset_left = 930.0
-offset_top = 1025.0
-offset_right = 1884.0
-offset_bottom = 1081.0
+offset_left = 1065.0
+offset_top = 1022.5
+offset_right = 1885.0
+offset_bottom = 1078.5
 theme_override_colors/font_color = Color(0.368627, 0.317647, 0.403922, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
-text = "Highscore:"
+text = "Highscore: 0"
 horizontal_alignment = 2
 
 [node name="highscore" type="Label" parent="."]
 texture_filter = 1
 texture_repeat = 1
-offset_left = 1058.0
-offset_top = 1019.0
-offset_right = 1878.0
-offset_bottom = 1075.0
+offset_left = 1060.0
+offset_top = 1020.0
+offset_right = 1880.0
+offset_bottom = 1076.0
 theme_override_colors/font_color = Color(0.498039, 0.439216, 0.541176, 1)
 theme_override_fonts/font = ExtResource("1_dxedd")
 theme_override_font_sizes/font_size = 50
-text = "Highscore:"
+text = "Highscore: 0"
 horizontal_alignment = 2

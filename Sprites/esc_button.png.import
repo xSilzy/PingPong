@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3eoupvf6me3v"
-path="res://.godot/imported/input_icon.png-a2b9f6f0c461b0157bc10684ea8512b8.ctex"
+uid="uid://d4k02h8bfe812"
+path="res://.godot/imported/esc_button.png-46eb7c20eced3acc965112203b010e3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/input_icon.png"
-dest_files=["res://.godot/imported/input_icon.png-a2b9f6f0c461b0157bc10684ea8512b8.ctex"]
+source_file="res://Sprites/esc_button.png"
+dest_files=["res://.godot/imported/esc_button.png-46eb7c20eced3acc965112203b010e3e.ctex"]
 
 [params]
 

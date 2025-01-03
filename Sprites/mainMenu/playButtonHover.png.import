@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvsciqju01t4j"
-path="res://.godot/imported/display_icon_selected.png-3ab85e041138509aa936ebe6b28a8f72.ctex"
+uid="uid://cv0smxshgrnqu"
+path="res://.godot/imported/playButtonHover.png-ceb2d7dce73b6a4b9e5dc3652353ca98.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/display_icon_selected.png"
-dest_files=["res://.godot/imported/display_icon_selected.png-3ab85e041138509aa936ebe6b28a8f72.ctex"]
+source_file="res://Sprites/mainMenu/playButtonHover.png"
+dest_files=["res://.godot/imported/playButtonHover.png-ceb2d7dce73b6a4b9e5dc3652353ca98.ctex"]
 
 [params]
 
