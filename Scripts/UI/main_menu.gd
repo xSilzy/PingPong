@@ -26,6 +26,7 @@ func _on_play_button_pressed():
 	Sounds.play_sound("buttonClick")
 	get_parent().add_scene_as_child("game")
 	get_parent().remove_child(self)
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 
 

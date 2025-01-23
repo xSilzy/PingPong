@@ -9,10 +9,11 @@ var FRAME_MAX : int = 5
 	]
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
 
+
+func _ready():
+	$currentPlayerScore.text = str("Current Score: ", Global.score)
+	$highscore.text = str("Highscore: ", Global.config.get_value("player","highscore"))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -21,7 +22,10 @@ func _process(_delta):
 		for button in buttons:
 			Global.button_grow(button)
 		frame_counter = 0
-	
+		$currentPlayerScore.text = str("Current Score: ", Global.score)
+		$highscore.text = str("Highscore: ", Global.config.get_value("player","highscore"))
+		$currentPlayerScoreBackground.text = $currentPlayerScore.text
+		$highscoreBackground.text = $highscore.text	
 	
 	
 func _input(event: InputEvent):
@@ -41,6 +45,7 @@ func _on_home_button_pressed():
 
 
 func _on_resume_button_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	get_tree().paused = false
 	Sounds.play_sound("buttonClick")
 	hud_node.show()
@@ -48,6 +53,7 @@ func _on_resume_button_pressed():
 
 
 func _on_retry_button_pressed():
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	get_tree().paused = false
 	Sounds.play_sound("buttonClick")
 	get_parent().reset_game_scene()

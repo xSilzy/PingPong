@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4k02h8bfe812"
-path="res://.godot/imported/esc_button.png-46eb7c20eced3acc965112203b010e3e.ctex"
+uid="uid://bbya7402hqra4"
+path="res://.godot/imported/score_frame.png-fe6b49aa76b8d80de6d01da5483b4536.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/esc_button.png"
-dest_files=["res://.godot/imported/esc_button.png-46eb7c20eced3acc965112203b010e3e.ctex"]
+source_file="res://Sprites/failMenu/score_frame.png"
+dest_files=["res://.godot/imported/score_frame.png-fe6b49aa76b8d80de6d01da5483b4536.ctex"]
 
 [params]
 

@@ -9,8 +9,6 @@ var FRAME_MAX : int = 5
 	]
 
 
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	frame_counter += 1
@@ -18,6 +16,8 @@ func _process(_delta):
 		for button in buttons:
 			Global.button_grow(button)
 		frame_counter = 0
+		$currentPlayerScore.text = str("Current Score: ", Global.score)
+		$highscore.text = str("Highscore: ", Global.config.get_value("player","highscore"))
 
 
 
@@ -29,6 +29,7 @@ func _on_home_button_button_down():
 
 
 func _on_retry_button_button_down(): 
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Sounds.play_sound("buttonClick")
 	get_parent().add_scene_as_child("game")
 	get_parent().remove_child(self)

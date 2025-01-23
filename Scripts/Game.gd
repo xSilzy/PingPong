@@ -18,7 +18,6 @@ func _ready():
 	ball.visible = false
 	$HUD/countdown.visible = true
 	$HUD/countdownBackground.visible = true
-	print("Highscore: ",Global.config.get_value("player","highscore"))
 	get_parent().game_scene = self
 
 
@@ -42,6 +41,7 @@ func _on_countdown_timeout():
 
 func _on_player_loose_body_entered(body):
 	if body == ball:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		score = -1
 		Global.save_data()
 		print("Highscore: ",Global.config.get_value("player","highscore"))
@@ -60,6 +60,8 @@ func _on_player_score_area_body_entered(body):
 		if score >= 0:
 			Sounds.play_sound("scoreup")
 		score += 1
+		Global.score = score
+		# Updated saved Highscore if the current score is higher
 		if Global.highscore <= score:
 			Global.highscore = score
 		Global.save_data()
@@ -74,6 +76,7 @@ func _on_accel_cooldown_timeout():
 	
 func _input(_event: InputEvent):
 		if Input.is_action_pressed("ui_cancel"):
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			$HUD.hide()
 			get_parent().add_scene_as_child("pause_menu")
 			get_tree().paused = true

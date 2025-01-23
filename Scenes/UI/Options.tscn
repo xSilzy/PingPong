@@ -1,13 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://d35a2lxt03wxc"]
+[gd_scene load_steps=10 format=3 uid="uid://d35a2lxt03wxc"]
 
-[ext_resource type="LabelSettings" uid="uid://b01uawbu6tbb3" path="res://Fonts/deafult.tres" id="1_cseec"]
 [ext_resource type="Script" path="res://Scripts/UI/options.gd" id="1_nqsgb"]
+[ext_resource type="Texture2D" uid="uid://bcd5c7miuorih" path="res://Sprites/optionsMenu/options_menu_background.png" id="2_613es"]
+[ext_resource type="Texture2D" uid="uid://dypu4ifkmebup" path="res://Sprites/optionsMenu/options_bar_horizontal.png" id="3_7421l"]
+[ext_resource type="Texture2D" uid="uid://c5qrr4ue2o43l" path="res://Sprites/optionsMenu/display_icon.png" id="4_18plu"]
+[ext_resource type="Texture2D" uid="uid://cvsciqju01t4j" path="res://Sprites/optionsMenu/display_icon_selected.png" id="5_hf77f"]
+[ext_resource type="Texture2D" uid="uid://3eoupvf6me3v" path="res://Sprites/optionsMenu/input_icon.png" id="6_sxhcq"]
+[ext_resource type="Texture2D" uid="uid://c522flq13v8eg" path="res://Sprites/optionsMenu/input_icon_selected.png" id="7_pqnic"]
+[ext_resource type="Texture2D" uid="uid://dr2n1j0nfiy1" path="res://Sprites/optionsMenu/sound_icon.png" id="8_1ulqv"]
+[ext_resource type="Texture2D" uid="uid://b6odwlljl0rva" path="res://Sprites/optionsMenu/sound_icon_selected.png" id="9_52pkg"]
 
 [node name="Options" type="Node2D"]
 script = ExtResource("1_nqsgb")
 
-[node name="Label" type="Label" parent="."]
-offset_right = 922.0
-offset_bottom = 51.0
-text = "Work In Progress,.."
-label_settings = ExtResource("1_cseec")
+[node name="OptionsMenuBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1052, 542)
+scale = Vector2(10, 10)
+texture = ExtResource("2_613es")
+
+[node name="OptionsBarHorizontal" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(105, 561)
+scale = Vector2(10, 10)
+texture = ExtResource("3_7421l")
+
+[node name="displayOptions" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 95.0
+offset_top = 310.0
+offset_right = 113.0
+offset_bottom = 328.0
+scale = Vector2(10, 10)
+pivot_offset = Vector2(9, 9)
+texture_normal = ExtResource("4_18plu")
+texture_focused = ExtResource("5_hf77f")
+stretch_mode = 3
+
+[node name="soundOptions" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 95.0
+offset_top = 553.0
+offset_right = 113.0
+offset_bottom = 571.0
+scale = Vector2(10, 10)
+pivot_offset = Vector2(9, 9)
+texture_normal = ExtResource("8_1ulqv")
+texture_focused = ExtResource("9_52pkg")
+stretch_mode = 3
+
+[node name="inputOptions" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 95.0
+offset_top = 795.0
+offset_right = 113.0
+offset_bottom = 813.0
+scale = Vector2(10, 10)
+pivot_offset = Vector2(9, 9)
+texture_normal = ExtResource("6_sxhcq")
+texture_focused = ExtResource("7_pqnic")
+stretch_mode = 3
+
+[connection signal="button_down" from="displayOptions" to="." method="_on_display_options_button_down"]
+[connection signal="button_down" from="soundOptions" to="." method="_on_sound_options_button_down"]
+[connection signal="button_down" from="inputOptions" to="." method="_on_input_options_button_down"]
